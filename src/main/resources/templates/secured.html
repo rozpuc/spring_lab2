@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Strona chroniona</title>
+</head>
+<body>
+    <h1 th:text="${message}"></h1>
+    <form method="post" action="/logout">
+        <input type="hidden" name="_csrf" th:value="${_csrf.token}" />
+        <button type="submit">Wyloguj</button>
+    </form>
+</body>
+</html>
